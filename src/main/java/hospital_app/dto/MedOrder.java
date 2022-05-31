@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 @Entity
@@ -17,9 +18,10 @@ public class MedOrder {
 	private double totalcost;
 	
 	@ManyToOne
+	@JoinColumn
 	private Encounter encounter;
 	
-	@OneToMany
+	@OneToMany(mappedBy="medOrder")
 	private List<Item> item;
 
 	/**

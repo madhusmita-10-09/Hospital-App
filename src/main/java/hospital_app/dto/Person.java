@@ -19,7 +19,7 @@ public class Person {
 	private String dob;
 	private String bloodGroup;
 	
-	@OneToMany
+	@OneToMany(mappedBy="person")
 	private List<Encounter> encounter;
 
 	/**

@@ -2,28 +2,35 @@ package hospital_app.service;
 
 import java.util.List;
 
+import hospital_app.dao.UserDao;
 import hospital_app.dto.User;
 
 public class UserService {
+	UserDao userDao=new UserDao();
 	public User saveUser(User user) {
 		
-		return null;
+		
+		return userDao.saveUser(user);
 	}
 
 	public User getUserById(int id) {
-		return null;
+		return userDao.getUserById(id);
+		
 	}
 
 	public User validateUser(String email, String password) {
-		return null;
+		return userDao.validateUser(email, password);
+		
 	}
 
 	public User updateUserById(int id, User user) {
-		return null;
+		
+		return userDao.updateUserById(id, user);
 	}
 
 	public List<User> getAllUser() {
-		return null;
+		
+		return userDao.getAllUser();
 	}
 
 	public List<User> getAllUserByRole() {
@@ -31,7 +38,8 @@ public class UserService {
 	}
 
 	public boolean deleteUserById(int id) {
-		return false;
+		return userDao.deleteUserById(id);
+		
 	}
 
 }

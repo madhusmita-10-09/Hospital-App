@@ -2,27 +2,38 @@ package hospital_app.service;
 
 import java.util.List;
 
+import hospital_app.dao.PersonDao;
 import hospital_app.dto.Person;
 
 public class PersonService {
-	public Person savePerson(Person person) {
-		return null;
-	}
+	PersonDao personDao=new PersonDao();
+		public Person savePerson(Person person) {
+			
+			
+			return personDao.savePerson(person);
+			
+			
+		}
+		
 
 	public Person getPersonById(int id) {
-		return null;
+		return personDao.getPersonById(id);
+		
 	}
 
-	public boolean updatePersonById(int id, Person person) {
-		return false;
+	public Person updatePersonById(int id, Person person) {
+		return personDao.updatePersonById(id, person);
+		
 	}
 
 	public List<Person> getAllPerson() {
-		return null;
+		return personDao.getAllPerson();
+		
 	}
 
 	public boolean deletePersonById(int id) {
-		return false;
+		return personDao.deletePersonById(id);
+
 	}
 
 }

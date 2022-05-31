@@ -14,7 +14,7 @@ public class Hospital {
 	private int hospitalId;
 	private String name;
 	private String gstNumber;
-	@OneToMany
+	@OneToMany(mappedBy="hospital")
 	private List<Branch>branch;
 	/**
 	 * @return the hospitalId
